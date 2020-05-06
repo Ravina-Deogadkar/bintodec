@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import Converter from "./Converter";
+import Converter from "./Component/Converter";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
