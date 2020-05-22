@@ -27,16 +27,19 @@ class ConvertType extends React.Component {
   render() {
     const classes = this.props;
     return (
-      <Select
-        value={this.state.convertTo}
-        onChange={this.handleChange()}
-        displayEmpty
-        className={classes.selectEmpty}
-        inputProps={{ "aria-label": "Without label" }}
-      >
-        <MenuItem value={"binary"}>Binary</MenuItem>
-        <MenuItem value={"decimal"}>Decimal</MenuItem>
-      </Select>
+      <div>
+        <span>Convert To </span>
+        <Select
+          value={this.state.convertTo}
+          onChange={this.handleChange()}
+          displayEmpty
+          className={classes.selectEmpty}
+          inputProps={{ "aria-label": "Without label" }}
+        >
+          <MenuItem value={"binary"}>Binary</MenuItem>
+          <MenuItem value={"decimal"}>Decimal</MenuItem>
+        </Select>
+      </div>
     );
   }
 }
