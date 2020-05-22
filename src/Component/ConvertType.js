@@ -16,18 +16,20 @@ class ConvertType extends React.Component {
       convertTo: "binary",
     };
   }
-  handleChange= (property) => event => {
+  handleChange = () => (event) => {
     let value = event.target.value;
     console.log("jjj");
     console.log(value);
-   // this.setState(value);
+    const obj = { convertTo: value };
+    this.setState(obj);
+    this.props.onTypeChange(obj);
   };
   render() {
     const classes = this.props;
     return (
       <Select
         value={this.state.convertTo}
-        onChange={() => this.handleChange("conversion type")}
+        onChange={this.handleChange()}
         displayEmpty
         className={classes.selectEmpty}
         inputProps={{ "aria-label": "Without label" }}
